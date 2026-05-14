@@ -4,8 +4,7 @@ run-name: if condition workflow
 
 on: 
     push: 
-        branches: 
-            - master
+        branches: master
 
 jobs:
     job1:
