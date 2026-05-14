@@ -1,17 +1,12 @@
 name: job dependencies workflow
 
 on: 
-    push: 
-        branches: 
-            main 
-    workflow_dispatch: 
+  workflow_dispatch: 
 
 jobs:
     job1:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout code
-              uses: actions/checkout@v2
 
             - name: run first job
               run: |
