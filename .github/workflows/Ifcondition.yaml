@@ -16,5 +16,4 @@ jobs:
               run: |
                     if [ $GITHUB_REF == 'refs/heads/master' ]; then
                         echo "This is the master branch"
-                    else
-                        echo "This is some other branch"
+                    fi
