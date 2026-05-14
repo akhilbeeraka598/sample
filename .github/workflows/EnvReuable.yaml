@@ -8,12 +8,15 @@ on:
             username:
                 required: true
                 type: string
-
+            purpose:
+                required: true
+                type: string
 jobs:
+
     job1:
         runs-on: ubuntu-latest
         steps:
             - name: print variable
               run: |
                 echo "User Name: ${{ inputs.username}}"
-                echo "Purpose: ${{github.event_name}}"
+                echo "Purpose: ${{ inputs.purpose }}"
