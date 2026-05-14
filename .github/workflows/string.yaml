@@ -28,5 +28,5 @@ jobs:
     steps:
       - name: step2
         run: |
-          echo "${{ needs.job1.outputs.css1 }}"
-          echo "${{ needs.job1.outputs.css2 }}"
+          echo "Name: ${{ needs.job1.outputs.css1 }}"
+          echo "job: ${{ needs.job1.outputs.css2 }}"
