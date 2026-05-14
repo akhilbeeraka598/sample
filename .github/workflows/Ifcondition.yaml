@@ -1,0 +1,24 @@
+name: if condition workeflow
+
+run-name: if condition workflow
+
+on: 
+    push: 
+        branches: 
+            - master
+            - dev
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v2
+            - name: run a script
+              run: |
+                    if [ $GITHUB_REF == 'refs/heads/master' ]; then
+                        echo "This is the master branch"
+                    elif [ $GITHUB_REF == 'refs/heads/dev' ]; then
+                        echo "This is the dev branch"
+                    else
+                        echo "This is some other branch"
