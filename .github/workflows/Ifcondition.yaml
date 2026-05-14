@@ -6,7 +6,6 @@ on:
     push: 
         branches: 
             - master
-            - dev
 
 jobs:
     job1:
@@ -18,7 +17,5 @@ jobs:
               run: |
                     if [ $GITHUB_REF == 'refs/heads/master' ]; then
                         echo "This is the master branch"
-                    elif [ $GITHUB_REF == 'refs/heads/dev' ]; then
-                        echo "This is the dev branch"
                     else
                         echo "This is some other branch"
