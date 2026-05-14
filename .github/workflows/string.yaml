@@ -11,12 +11,14 @@ jobs:
 
     outputs:
       css1: ${{ steps.ak.outputs.name }}
+      css2: ${{ steps.ak.outputs.job }}
+
 
     steps:
       - name: step1
         id: ak
         run: |
-          echo "name=kumar" >> "$GITHUB_OUTPUT"
+          echo "name=Akhil" >> "$GITHUB_OUTPUT"
           echo "job=devops" >> "$GITHUB_OUTPUT"
 
   job2:
@@ -26,4 +28,5 @@ jobs:
     steps:
       - name: step2
         run: |
+          echo "${{ needs.job1.outputs.css1 }}"
           echo "${{ needs.job1.outputs.css1 }}"
