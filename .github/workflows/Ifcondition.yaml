@@ -15,5 +15,5 @@ jobs:
             - name: run a script
               run: |
                     if [ $GITHUB_REF == 'refs/heads/main' ]; then
-                        echo "This is the main branch"
+                        echo "This is the master branch"
                     fi
