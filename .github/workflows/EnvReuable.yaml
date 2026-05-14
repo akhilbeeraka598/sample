@@ -1,0 +1,19 @@
+name: envreusable workflow
+
+run-name: environment workflow
+
+on: 
+    workflow_call: 
+        inputs:
+            username:
+                required: true
+                type: string
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print variable
+              run: |
+                echo "User Name: ${{ inputs.username}}"
+                echo "Purpose: ${{github.event_name}}"
