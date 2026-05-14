@@ -3,9 +3,7 @@ name: EnvMain workflow
 run-name: environment main workflow
 
 on: 
-    push:
-        branches: 
-            - master
+    workflow_dispatch: 
 
 jobs:
     call-workflow:
