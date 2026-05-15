@@ -1,9 +1,7 @@
 name: job dependencies workflow
 
 on: 
-  push:
-    branches: 
-      - master
+  workflow_dispatch: 
 
 jobs:
     job1:
